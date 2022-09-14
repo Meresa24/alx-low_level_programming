@@ -1,20 +1,18 @@
 #include "holberton.h"
+
 /**
- * main - Entry point
- * Description: prints 'Holberton \n'
- * Return: Always 0 (success)
+ * main - debugging example
+ * Return: 0
  */
 int main(void)
 {
-char str[] = "Holberton\n";
-int i = 0;
+	char *holberton = "Holberton";
 
-while (str[i] != '\0')
+	while (*holberton)
 	{
-	char c = str[i];
-
-	_putchar(c);
-	i++;
+		_putchar(*holberton);
+		holberton++;
 	}
-return (0);
+	_putchar('\n');
+	return (0);
 }
