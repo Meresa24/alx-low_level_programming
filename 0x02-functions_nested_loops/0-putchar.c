@@ -1,21 +1,20 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * main - Print "Holberton"
- *
- * Return: Always 0 (Success)
- */
-
+*main - function prints text as output
+*
+*Return:return 0
+*/
 int main(void)
 {
-	int i = 0;
-	char name_of_school[] = "Holberton";
+	char school[10] = "_putchar";
 
-	while (i < 9)
+	int i;
+
+	for (i = 0; i < 8; i++)
 	{
-		_putchar(name_of_school[i]);
-		i++;
+		_putchar(school[i]);
 	}
-	_putchar('\n');
+	_putchar(10);
 	return (0);
 }
