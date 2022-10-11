@@ -1,1 +1,1 @@
-its all about type structure.
+it all about type strucure.
