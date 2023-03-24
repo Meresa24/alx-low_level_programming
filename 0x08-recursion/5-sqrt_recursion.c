@@ -1,33 +1,29 @@
-#include "holberton.h"
+#include "main.h"
 /**
- * _sqrt_recursion - returns square root of a number.
- *
- * @n: number.
- * Return: natural square root of a number.
+ * sqrt_a - Main Entry
+ * @a: input
+ * @b: input
+ * Return: 0
  */
-int _sqrt_recursion(int n)
+int sqrt_a(int a, int b)
 {
-	int square = 2;
-
-	if (n < 0)
+	if (b * b == a)
+	{
+		return (b);
+	}
+	else if (b * b > a)
+	{
 		return (-1);
-	else if (n == 0 || n == 1)
-		return (n);
-	return (isqrt(n, square));
+	}
+	return (sqrt_a(a, b + 1));
 }
 
 /**
-  * isqrt - wrapper function to check for squaroot.
-  *
-  * @n: number to check for squareroot.
-  * @i: squareroot.
-  * Return: 1 if squareroot is found, -1 if not found else recurse.
-  */
-int isqrt(int n, int i)
+ * _sqrt_recursion - Main Entry
+ * @n: input
+ * Return: 0
+ */
+int _sqrt_recursion(int n)
 {
-	if (i * i > n)
-		return (-1);
-	if (i * i == n)
-		return (i);
-	return (isqrt(n, i + 1));
+	return (sqrt_a(n, 0));
 }

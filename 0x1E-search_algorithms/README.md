@@ -1,34 +1,20 @@
 # 0x1E. C - Search Algorithms
 
-###### 0. Linear search  
-> Write a function that searches for a value in an array of integers using the Linear search algorithm  
-
-###### 1. Binary search  
-> Write a function that searches for a value in a sorted array of integers using the Binary search algorithm  
-
-###### 2. Big O #0  
-> What is the time complexity (worst case) of a linear search in an array of size n?  
-
-###### 3. Big O #1  
-> What is the space complexity (worst case) of an iterative linear search algorithm in an array of size n?  
-
-###### 4. Big O #2  
-> What is the time complexity (worst case) of a binary search in an array of size n?  
-
-###### 5. Big O #3  
-> What is the space complexity (worst case) of a binary search in an array of size n?  
-
-###### 6. Big O #4  
-> What is the space complexity of this function / algorithm?  
-```int **allocate_map(int n, int m)
-{
-     int **map;
-
-     map = malloc(sizeof(int *) * n);
-     for (size_t i = 0; i < n; i++)
-     {
-          map[i] = malloc(sizeof(int) * m);
-     }
-     return (map);
-}
-```
+| TASK | FILE                                             | DESCRIPTION |
+| ---- | ------------------------------------------------ | ----------- |
+| 0    | [0-linear.c](./0-linear.c)                       |             |
+| 1    | [1-binary.c](./1-binary.c)                       |             |
+| 2    | [2-O](./2-O)                                     |             |
+| 3    | [3-O](./3-O)                                     |             |
+| 4    | [4-O](./4-O)                                     |             |
+| 5    | [5-O](./5-O)                                     |             |
+| 6    | [6-O](./6-O)                                     |             |
+| 7    | [100-jump.c](./100-jump.c)                       |             |
+| 8    | [101-O](./101-O)                                 |             |
+| 9    | [102-interpolation.c](./102-interpolation.c)     |             |
+| 10   | [103-exponential.c](./103-exponential.c)         |             |
+| 11   | [104-advanced_binary.c](./104-advanced_binary.c) |             |
+| 12   | [105-jump_list.c](./105-jump_list.c)             |             |
+| 13   | [106-linear_skip.c](./106-linear_skip.c)         |             |
+| 14   | [107-O](./107-O)                                 |             |
+| 15   | [108-O](./108-O)                                 |             |

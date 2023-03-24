@@ -1,37 +1,29 @@
-#include "holberton.h"
-
+#include "main.h"
 /**
- * *leet - check the code for Holberton School students.
+ * leet - encodes a string
+ * @str: the string to encode
  *
- * @str: string.
- * Return: string.
+ * Return: the encode string
  */
 char *leet(char *str)
 {
-	int i;
+	int i, j;
+	char c[] = "aAeEoOtTlL";
+	char n[] = "4433007711";
 
-	for (i = 0; str[i] != '\0'; i++)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (str[i] == 'a' || str[i] == 'A')
+		j = 0;
+		while (c[j] != '\0')
 		{
-			str[i] = '4';
+			if (str[i] == c[j])
+			{
+				str[i] = n[j];
+			}
+			j++;
 		}
-		else if (str[i] == 'e' || str[i] == 'E')
-		{
-			str[i] = '3';
-		}
-		else if (str[i] == 'o' || str[i] == 'O')
-		{
-			str[i] = '0';
-		}
-		else if (str[i] == 't' || str[i] == 'T')
-		{
-			str[i] = '7';
-		}
-		else if (str[i] == 'l' || str[i] == 'L')
-		{
-			str[i] = '1';
-		}
+		i++;
 	}
 	return (str);
 }

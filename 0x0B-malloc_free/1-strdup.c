@@ -1,49 +1,39 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdlib.h>
-#include <stddef.h>
-
 /**
- * *_strdup - returns pointer to a newly allocated space in memory,
- * which contains a copy of the string given as a parameter.
- *
- * @str: string.
- * Return: NULL if str = NULL or insufficient memory, if success return
- * pointer to duplicated string.
+ * _strdup - Main Entry
+ * @str: input
+ * Return: 0
  */
 char *_strdup(char *str)
 {
-	int str_size, i;
-	char *copy;
+	char *nstr;
+	unsigned int len, i;
 
+	/* check is str is null */
 	if (str == NULL)
-		return (NULL);
-	/* allocating memory for the copy */
-	str_size = string_length(str);
-	copy = (char *)malloc(sizeof(char) * str_size + 1);
-	if (copy == NULL)
-		return (NULL);
-	/* copy string */
-	i = 0;
-	while (str[i] != '\0')
 	{
-		copy[i] = str[i];
-		i++;
+		return (NULL);
 	}
-	copy[i] = '\0';
-	return (copy);
-}
-/**
-  * string_length - finds the length of a string.
-  * Return: length of c.
-  * @pointer: pointer.
-  */
-int string_length(char *pointer)
-{
-	int c = 0;
 
-	while (*(pointer + c) != '\0')
+	len = 0;
+	while (str[len] != '\0')
 	{
-		c++;
+		len++;
 	}
-	return (c);
+
+	nstr = malloc(sizeof(char) * (len + 1));
+
+	/*check if malloc was successful*/
+	if (nstr == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; i < len; i++)
+	{
+		nstr[i] = str[i];
+	}
+	nstr[len] = '\0';
+	return (nstr);
 }

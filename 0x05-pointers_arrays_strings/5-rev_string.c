@@ -1,49 +1,21 @@
-#include "holberton.h"
+#include "main.h"
+#include "string.h"
 
 /**
- * rev_string - Reverses a string.
- *
- * string_length: prints number of characters.
- * @s: store character.
- * @: store character.
- * Return: Always 0.
- */
+ * rev_string - reverse a string
+ * @s: string to reverse
+**/
+
 void rev_string(char *s)
 {
-	int length, c;
-	char *begin, *end, temp;
+	int i, len = strlen(s), j = 0;
+	char temp;
 
-	length = string_length(s);
-
-	begin = s;
-	end = s;
-
-	for (c = 0; c < (length - 1); c++)
-		end++;
-
-	for (c = 0; c < length / 2; c++)
+	for (i = len - 1; i >= len / 2; i--)
 	{
-		temp = *end;
-		*end = *begin;
-		*begin = temp;
-
-		begin++;
-		end--;
+		temp = s[i];
+		s[i] = s[j];
+		s[j] = temp;
+		j++;
 	}
-}
-
-/**
-  * string_length - finds the length of a string.
-  * Return: length of c.
-  * @pointer: pointer.
-  */
-int string_length(char *pointer)
-{
-	int c = 0;
-
-	while (*(pointer + c) != '\0')
-	{
-		c++;
-	}
-	return (c);
 }

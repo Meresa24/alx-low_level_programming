@@ -1,16 +1,21 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * print_line - check the code for Holberton School students.
- *
- * @n: number of times to print _.
- */
+ * print_line - draws a straight line in the terminal
+ * @n: number of times to print '_'
+**/
+
 void print_line(int n)
 {
-	while (n > 0)
+	int i;
+
+	for (i = 0; i < n; i++)
 	{
-		_putchar('_');
-		n--;
+		if (n > 0)
+		{
+			_putchar('_');
+		}
 	}
+
 	_putchar('\n');
 }

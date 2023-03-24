@@ -1,50 +1,54 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
-  * main - prints the minimum number of coins to make change.
-  * @argc: argument counter.
-  * @argv: argument vector.
-  * Return: return 1 if error, else return 0.
-  */
+ * main - Main Entry
+ * @argc: input
+ * @argv: input
+ * Return: Always 0 (success)
+**/
 int main(int argc, char *argv[])
 {
-	int change, num;
+int cents, coins = 0;
 
-	change = 0;
-
-	if (argc == 2)
-	{
-		num = atoi(argv[1]);
-		if (num > 0)
-		{
-			for (; num >= 25; change++)
-			{
-				num = num - 25;
-			}
-			for (; num >= 10; change++)
-			{
-				num = num - 10;
-			}
-			for (; num >= 5; change++)
-			{
-				num = num - 5;
-			}
-			for (; num >= 2; change++)
-			{
-				num = num - 2;
-			}
-			for (; num >= 1; change++)
-			{
-				num = num - 1;
-			}
-		}
-		printf("%d\n", change);
-		return (0);
-	}
-	else
-	{
-		printf("Error\n");
-		return (1);
-	}
+if (argc == 2)
+{
+cents = atoi(*(argv + 1));
+while (cents > 0)
+{
+if (cents % 25 < cents)
+{
+cents -= 25;
+coins++;
 }
+else if (cents % 10 < cents)
+{
+cents -= 10;
+coins++;
+}
+else if (cents % 5 < cents)
+{
+cents -= 5;
+coins++;
+}
+else if (cents % 2 < cents)
+{
+cents -= 2;
+coins++;			}
+else if (cents % 1 < cents)
+{
+cents -= 1;
+coins++;
+}
+}
+}
+else
+{
+printf("Error\n");
+return (1);
+}
+printf("%d\n", coins);
+return (0);
+}
+
+
+

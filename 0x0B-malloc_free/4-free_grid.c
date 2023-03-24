@@ -1,20 +1,21 @@
-#include "holberton.h"
+#include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
-
 /**
- * free_grid - frees 2D grid previously created by alloc_grid
- * @grid: the address of the two dimensional grid
- * @height: height of the grid
- *
- * Return: Nothing.
+ * free_grid - Main Entry
+ * @grid: input
+ * @height: input
  */
 void free_grid(int **grid, int height)
 {
 	int i;
 
-	for (i = 0; i < height; i++)
+	if (grid != NULL || height != 0)
 	{
-		free(grid[i]);
+		for (i = 0; i < height; i++)
+		{
+			free(grid[i]);
+		}
+		free(grid);
 	}
-	free(grid);
 }

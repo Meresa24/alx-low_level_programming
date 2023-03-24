@@ -1,32 +1,21 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * puts2 - print every other character of a string.
- * @str: character
- */
+ * puts2 - print one char out of 2 of a string
+ * @str: string to print
+**/
+
 void puts2(char *str)
 {
 	int i;
 
-	for (i = 0; i < string_length(str); i += 2)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		_putchar(str[i]);
+		if (i % 2 == 0)
+		{
+			_putchar(str[i]);
+		}
 	}
+
 	_putchar('\n');
-}
-
-/**
-  * string_length - finds the length of a string.
-  * Return: length of c.
-  * @pointer: pointer.
-  */
-int string_length(char *pointer)
-{
-	int c = 0;
-
-	while (*(pointer + c) != '\0')
-	{
-		c++;
-	}
-	return (c);
 }

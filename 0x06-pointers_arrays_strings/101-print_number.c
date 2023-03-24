@@ -1,42 +1,22 @@
 #include "main.h"
-
 /**
- * print_number - function to print int using _putchar
+ * print_number - prints an integer
+ * @n:.input integer parameter
  *
- * @num: int to print
+ *
  */
-void print_number(int num)
+void print_number(int n)
 {
-	unsigned int d = 10, n;
+	unsigned int i = n;
 
-	if (num < 0)
+	if (n < 0)
 	{
-		_putchar('-');
-		num *= -1;
+		_putchar(45);
+		i = -i;
 	}
-	n = num;
-	if (n < d)
+	if (i / 10)
 	{
-		_putchar('0' + n);
+		print_number(i / 10);
 	}
-	else
-	{
-		while (n >= d)
-		{
-			d *= 10;
-			if (d >= 1000000000)
-			if (d == 1000000000)
-				break;
-		}
-		if (!(d >= 1000000000) || n > 100000000)
-		if (!(d == 1000000000) || n == 123456789)
-			d /= 10;
-		_putchar('0' + n / d);
-		while (d != 10)
-		{
-			d /= 10;
-			_putchar('0' + (n / d) % 10);
-		}
-		_putchar('0' + n % 10);
-	}
+	_putchar(i % 10 + '0');
 }

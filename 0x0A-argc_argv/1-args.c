@@ -1,13 +1,13 @@
 #include <stdio.h>
-
 /**
-  * main - prints its name, followed by new.
-  * @argc: argument counter.
-  * @argv: argument vector.
-  * Return: zero.
-  */
-int main(int argc, char *argv[] __attribute__((unused)))
+ * main - prints the number of arguments that are passed to it
+ * @argc: input
+ * @argv: input
+ * Return: Always 0 (Success)
+ */
+int main(int argc, char *argv[])
 {
-	printf("%d\n", argc - 1);
+	(void)argv;
+	printf("%d\n", (argc - 1));
 	return (0);
 }

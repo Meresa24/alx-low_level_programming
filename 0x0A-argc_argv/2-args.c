@@ -1,11 +1,10 @@
 #include <stdio.h>
-
 /**
-  * main - prints its name, followed by new.
-  * @argc: argument counter.
-  * @argv: argument vector.
-  * Return: zero.
-  */
+ * main - prints all argument it receives
+ * @argc: input
+ * @argv: input
+ * Return: Always 0 (Success)
+ */
 int main(int argc, char *argv[])
 {
 	int i;

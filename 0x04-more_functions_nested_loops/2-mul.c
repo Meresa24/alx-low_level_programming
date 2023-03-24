@@ -1,16 +1,13 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * mul - multiplies two numbers.
- *
- * @a: first number.
- * @b: second number.
- * Return: result.
- */
+ * mul - multiplies two integers
+ * @a: multiplies with @b
+ * @b: multiplies with @a
+ * Return: multiplication of @a and @b
+**/
+
 int mul(int a, int b)
 {
-	int result;
-
-	result = a * b;
-	return (result);
+	return (a * b);
 }
