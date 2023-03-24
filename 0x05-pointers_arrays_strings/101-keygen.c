@@ -3,9 +3,9 @@
 #include <time.h>
 
 /**
- * main - generates random passwords for 101-crackme
- * Return: Always 0
- */
+  * main - generates random passwords for 101-crackme
+  * Return: zero
+  */
 int main(void)
 {
 	int sum;
@@ -19,5 +19,5 @@ int main(void)
 		putchar(c);
 	}
 	putchar(2772 - sum);
-return (0);
+	return (0);
 }

@@ -1,14 +1,14 @@
-#include "main.h"
-/**
- * _isdigit - Check for a digit (0-9)
- * @c: Integer holding the character
- *
- * Return: 1- Digit 0- Not
- */
+#include "holberton.h"
 
+/**
+ * _isdigit - checks for a digit.
+ *
+ * @c: value to be checked
+ * Return: 1 if c is digit and 0 otherwise.
+ */
 int _isdigit(int c)
 {
-	if (c >= 48 && c <= 57)
+	if (c >= '0' && c <= '9')
 		return (1);
-return (0);
+	return (0);
 }

@@ -1,20 +1,23 @@
-#include "main.h"
-#include <stdio.h>
+#include "holberton.h"
 
 /**
- * print_most_numbers - Print numbers between 0 to 9 incl.
+ * print_most_numbers - print 0 to 9 without 2 and 4.
  *
- * Return: Void.
+ * Return: Always 0.
  */
 void print_most_numbers(void)
 {
-	int i;
+	int a;
 
-	for (i = 0; i < 10; i++)
+	for (a = 0; a <= 9; a++)
 	{
-		if (i != 2 && i != 4)
+		if (a == 2 || a == 4)
 		{
-			_putchar(i + '0');
+			continue;
+		}
+		else
+		{
+			_putchar('0' + a);
 		}
 	}
 	_putchar('\n');

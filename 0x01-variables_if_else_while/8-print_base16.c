@@ -1,24 +1,19 @@
 #include <stdio.h>
+
 /**
- * main -Entry point
- * Return: Always 0 (Success)
- */
+   * main - print hexadecimal numbers in lowercase
+   *
+   * Return: zero
+   */
 int main(void)
 {
-	char c = 'a';
-	int num;
+	int i;
+	int ch;
 
-	for (num = 0; num < 16; num++)
-	{
-		if (num < 10)
-		{
-			putchar(num + '0');
-		} else
-		{
-			putchar(c);
-			c++;
-		}
-	}
+	for (i = '0'; i <= '9'; i++)
+		putchar(i);
+	for (ch = 'a'; ch <= 'f'; ch++)
+		putchar(ch);
 	putchar('\n');
 	return (0);
 }

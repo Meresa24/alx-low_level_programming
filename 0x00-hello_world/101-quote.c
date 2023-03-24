@@ -1,11 +1,11 @@
-#include <unistd.h>
-
+#include <stdio.h>
 /**
- * main - write to stdout
- * Return: Always 0
- */
+   * main - prints to the standard error
+   *
+   * Return: one
+   */
 int main(void)
 {
-	write(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
+	fprintf(stderr, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
 	return (1);
 }

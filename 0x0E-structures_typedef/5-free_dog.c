@@ -2,14 +2,14 @@
 #include <stdlib.h>
 
 /**
- * free_dog - frees memory held by passed struct
+ * free_dog - function that frees a dog.
  *
- * @d: struct to free
- * Return: nothing
+ * @d: pointer.
+ * Return: nothing.
  */
 void free_dog(dog_t *d)
 {
-	if (d != NULL)
+	if (d)
 	{
 		free(d->name);
 		free(d->owner);

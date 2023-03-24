@@ -1,18 +1,16 @@
-#include "main.h"
-#include <stdio.h>
+#include "holberton.h"
 
 /**
- * print_line - Print line dependent on the integer n.
- * @n : The number of '_' characters to use
- * Return: Void.
+ * print_line - check the code for Holberton School students.
+ *
+ * @n: number of times to print _.
  */
 void print_line(int n)
 {
-	int i;
-
-	for (i = 0; i < n; i++)
+	while (n > 0)
 	{
 		_putchar('_');
+		n--;
 	}
 	_putchar('\n');
 }

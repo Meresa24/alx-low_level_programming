@@ -1,43 +1,58 @@
-#include "main.h"
+#include "holberton.h"
 #include <stdlib.h>
+#include <stddef.h>
 
 /**
- * str_concat - concatenates two strings
+ * *str_concat - concatenates two strings.
  *
- * @s1: string 1
- * @s2: string 2
- * Return: char pointer
+ * @s1: first string.
+ * @s2: second string.
+ * Return: Always 0.
  */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int i = 0, j, size = 0;
-	char *str;
+	int i = 0, j = 0, n;
+	char *new_str;
 
-	if (s1 != NULL)
-		for (i = 0; s1[i] != '\0'; i++)
-			size++;
-	if (s2 != NULL)
-		for (i = 0; s2[i] != '\0'; i++)
-			size++;
-	str = malloc(sizeof(char) * (size + 1));
-	if (str == NULL)
-		return (NULL);
-	if (s1 == NULL && s2 == NULL)
-	{
-		str[0] = '\0';
-		return (str);
-	}
-	if (s1 != NULL)
-		for (i = 0; s1[i] != '\0'; i++)
-			str[i] = s1[i];
 	if (s1 == NULL)
-		i = 0;
-	if (s2 != NULL)
-		for (j = 0; s2[j] != '\0'; j++)
-		{
-			str[i] = s2[j];
-			i++;
-		}
-	str[size] = '\0';
-	return (str);
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	n = string_length(s1) + string_length(s2) + 1;
+	new_str = malloc(sizeof(char) * n);
+	/* check if null is passed */
+	if (new_str == NULL)
+		return (NULL);
+	/* insert s1 into the new string */
+	while (s1[i] != '\0')
+	{
+		new_str[j] = s1[i];
+		i++;
+		j++;
+	}
+	/* insert s2 into the new string */
+	i = 0;
+	while (s2[i] != '\0')
+	{
+		new_str[j] = s2[i];
+		i++;
+		j++;
+	}
+	new_str[j] = '\0';
+	return (new_str);
+}
+/**
+  * string_length - finds the length of a string.
+  * Return: length of c.
+  * @pointer: pointer.
+  */
+int string_length(char *pointer)
+{
+	int c = 0;
+
+	while (*(pointer + c) != '\0')
+	{
+		c++;
+	}
+	return (c);
 }

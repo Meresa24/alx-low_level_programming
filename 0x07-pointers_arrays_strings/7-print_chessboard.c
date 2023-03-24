@@ -1,10 +1,10 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * print_chessboard - prints the chessboard
+ * print_chessboard - prints chessboard.
  *
- * @a: 2-dimensional array
- * Return: void
+ * @a: rows.
+ * Return: nothing.
  */
 void print_chessboard(char (*a)[8])
 {

@@ -1,34 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- *main - prints its opcodes
- *
- *@argc:arguement count
- *@argv:arguement vector
- *
- *Return:int
- *
+ * main - function entry point
+ * @argc: argument counter
+ * @argv: argument vector
+ * Return: always zero
  */
 int main(int argc, char *argv[])
 {
-	int bytes, i;
-	char *p = (char *)main;
+	int i = 0;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
-	bytes = atoi(argv[1]);
-	if (bytes < 0)
+	if (atoi(argv[1]) < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
-	for (i = 0; i < bytes - 1; i++)
+	for (; i < atoi(argv[1]); i++)
 	{
-		printf("%02hhx ", p[i]);
+		printf("%02hhx", *((char *)main + i));
+		if (i < atoi(argv[1]) - 1)
+			printf(" ");
+		else
+			printf("\n");
 	}
-	printf("%02hhx\n", p[i]);
 	return (0);
 }

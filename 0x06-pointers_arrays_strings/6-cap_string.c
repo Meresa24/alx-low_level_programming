@@ -1,34 +1,41 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * cap_string - capitalizes chars in a string following a separator
+ * *cap_string - capitalizes all words of a string.
  *
- * @c: character string pointer
- * Return: char pointer
+ * @str: hold character.
+ * Return: string.
  */
-char *cap_string(char *c)
+char *cap_string(char *str)
 {
-	int i = 0, j,
-	sep[] = {32, '\t', 11,  '\n', 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
+	int i;
 
-	if (c[0] > 96 && c[0] < 123)
-		c[0] -= 32;
-	while (c[i] != '\0')
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (c[i] > 96 && c[i] < 123)
+		if (i == 0)
 		{
-			j = 0;
-			while (j < 14)
+			if ((str[i] >= 97 && str[i] <= 122))
 			{
-				if (c[i - 1] == sep[j])
-				{
-					c[i] -= 32;
-					break;
-				}
-				j++;
+				str[i] = str[i] - 32;
+				continue;
 			}
 		}
-		i++;
+		else if (str[i] == ' ')
+		{
+			++i;
+			if (str[i] >= 97 && str[i] <= 122)
+			{
+				str[i] = str[i] - 32;
+				continue;
+			}
+		}
+		else
+		{
+			if (str[i] >= 65 && str[i] <= 90)
+			{
+				str[i] = str[i] + 32;
+			}
+		}
 	}
-	return (c);
+	return (str);
 }
