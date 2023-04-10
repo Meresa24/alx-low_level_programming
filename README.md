@@ -38,4 +38,4 @@
 
 ## Author
 
-- Mubarek Seid
+- Meresa Gidey
